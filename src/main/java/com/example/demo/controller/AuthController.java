@@ -17,6 +17,11 @@ public class AuthController {
 
     @Autowired
     private JwtUtil jwtUtil;
+    
+    @GetMapping("/")
+    public String root() {
+    	return "Api Running";
+    }
 
     @PostMapping("/register")
     public String register(@RequestBody User user) {
